@@ -1,0 +1,38 @@
+#Define services
+services:
+
+  #MySQL Database
+  mysql-DB-qa:
+    image: "mysql:latest"
+    container_name: mysql-DB-qa
+    ports: 
+      - 3306:3306
+    environment:
+      - MYSQL_DATABASE=mysql-DB:3306/abet_qa
+      - MYSQL_USER=javauser
+      - MYSQL_PASSWORD=psw123
+      - MYSQL_ROOT_PASSWORD=psw
+    
+  #Back-end Spring Boot Application
+  back_end_qa:
+    build: ../ABET-Back-End
+    container_name: back_end_qa
+    ports: 
+      - 8090:8090
+    links: 
+      - mysql-DB-qa
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-DB-qa:3306/mysql-DB:3306/abet_qa
+      - SPRING_DATASOURCE_USERNAME=javauser
+      - SPRING_DATASOURCE_PASSWORD=psw123
+
+  #Font-End Angular Application
+  front_end_qa:
+    build: ../FrontEnd
+    container_name: ABET-Front-End-qa
+    expose:
+      - 8080
+    ports: 
+      - 8080:8080
+    links: 
+      - back_end_qa
