@@ -1,0 +1,8 @@
+[submodule "FrontEnd"]
+	path = FrontEnd
+	url = https://github.com/Yotas01/FrontEnd
+	branch = main
+[submodule "ABET-Back-End"]
+	path = ABET-Back-End
+	url = https://github.com/Yotas01/ABET-Back-End
+	branch = main
