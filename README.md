@@ -4,7 +4,7 @@
 
 ## How to install and run
 
-1. Clone this repository running the comand `git clone https://github.com/Yotas01/ABET-APP`
+1. Clone this repository running the comand `git clone --recursive https://github.com/Yotas01/ABET-APP`
 2. We advise opening the project with [VSCode](https://code.visualstudio.com) to build the **Front-end** and the **Back-end**. To do this go to the ABET-Back-End folder and run the following command:
     `./gradlew build -x test`
   
