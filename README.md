@@ -25,6 +25,7 @@ This will create the Docker container with the images for the MySQL Database, th
 If you want to run the Angular APP live and not in the Docker container, stop the ABET-Front-nd Docker image and go to the Front-End folder and run the command:
  `ng serve --configuration=local`
 
+## How to install and run remotely
 If you are deploying the application in the server follow the next steps instead:
 1. Clone this repository running the comand `git clone --recursive https://github.com/Yotas01/ABET-APP`
 2. Open the new ABET-APP folder and inside there should be 2 more folders: 'ABET-Back-End' and 'Front-End' Go to the 'ABET-Back-End' folder and run the command
